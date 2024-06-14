@@ -13,13 +13,13 @@ $ cargo build --release
 To execute the chain, run:
 
 ```sh
-$ ./target/release/frontier-template-node --dev
+$ ./target/release/plenitud-template-node --dev
 ```
 
 The node also supports to use manual seal (to produce block manually through RPC). This is also used by the `ts-tests`:
 
 ```sh
-$ ./target/release/frontier-template-node --dev --sealing=manual
+$ ./target/release/plenitud-template-node --dev --sealing=manual
 ```
 
 The output shows the following logs:
