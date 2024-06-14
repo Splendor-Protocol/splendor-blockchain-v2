@@ -1,9 +1,9 @@
-# Polkadot Frontier
+# Plenitud Network (EVM)
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/polkadot-evm/frontier/test.yml)](https://github.com/polkadot-evm/frontier/actions)
 [![Matrix](https://img.shields.io/matrix/frontier:matrix.org)](https://matrix.to/#/#frontier:matrix.org)
 
-Frontier is the EVM backbone of Polkadot.
+Plenitud Network is a Powerful EVM Blockchain.
 
 ## Features
 

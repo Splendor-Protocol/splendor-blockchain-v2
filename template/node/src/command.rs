@@ -16,7 +16,7 @@ use crate::chain_spec::get_account_id_from_seed;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Frontier Node".into()
+		"Plenitud Node".into()
 	}
 
 	fn impl_version() -> String {
@@ -41,6 +41,10 @@ impl SubstrateCli for Cli {
 
 	fn load_spec(&self, id: &str) -> Result<Box<dyn ChainSpec>, String> {
 		Ok(match id {
+			"prod" => {
+				let enable_manual_seal = self.sealing.map(|_| true).unwrap_or_default();
+				Box::new(chain_spec::production_config(enable_manual_seal))
+			}
 			"dev" => {
 				let enable_manual_seal = self.sealing.map(|_| true).unwrap_or_default();
 				Box::new(chain_spec::development_config(enable_manual_seal))
