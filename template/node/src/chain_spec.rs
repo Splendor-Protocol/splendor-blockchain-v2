@@ -57,7 +57,7 @@ const PLN_UNITS: Balance = 1_000_000_000_000_000_000;
 
 pub fn production_config(enable_manual_seal: bool) -> ChainSpec {
 	ChainSpec::builder(WASM_BINARY.expect("WASM not available"), Default::default())
-		.with_name("Plenitud Network")
+		.with_name("Plenitud Network Mainnet")
 		.with_id("prod")
 		.with_chain_type(ChainType::Live)
 		.with_properties(properties())
@@ -66,7 +66,8 @@ pub fn production_config(enable_manual_seal: bool) -> ChainSpec {
 			AccountId::from(hex!("526c0C80ACa3946aFd61AB5d46618AAf43D8efC4")),
 			// Pre-funded accounts
 			vec![
-				AccountId::from(hex!("526c0C80ACa3946aFd61AB5d46618AAf43D8efC4")), // Diego Asencio - Plenitud
+				AccountId::from(hex!("526c0C80ACa3946aFd61AB5d46618AAf43D8efC4")), // Diego Asencio - Plenitud/Metamask
+				AccountId::from(hex!("999CB50898dfb71C6aAbcA7943E56f14ba80eFDA")), // Diego Asencio - Plenitud/Polkadot
 			],
 			// Initial PoA authorities
 			vec![
@@ -263,7 +264,7 @@ fn mainnet_genesis(
 			"balances": endowed_accounts
 				.iter()
 				.cloned()
-				.map(|k| (k, 1_000_000 * PLN_UNITS))
+				.map(|k| (k, 100_000_000 * PLN_UNITS))
 				.collect::<Vec<_>>()
 		},
 		"aura": { "authorities": initial_authorities.iter().map(|x| (x.0.clone())).collect::<Vec<_>>() },
