@@ -62,12 +62,11 @@ pub fn production_config(enable_manual_seal: bool) -> ChainSpec {
 		.with_chain_type(ChainType::Live)
 		.with_properties(properties())
 		.with_genesis_config_patch(mainnet_genesis(
-			// Sudo account (Diego Asencio - Plenitud)
-			AccountId::from(hex!("526c0C80ACa3946aFd61AB5d46618AAf43D8efC4")),
+			// Sudo account (Plenitud)
+			AccountId::from(hex!("50D9DF1EB7333151a3F9F2aA690810Acc4B11D9f")),
 			// Pre-funded accounts
 			vec![
-				AccountId::from(hex!("526c0C80ACa3946aFd61AB5d46618AAf43D8efC4")), // Diego Asencio - Plenitud/Metamask
-				AccountId::from(hex!("999CB50898dfb71C6aAbcA7943E56f14ba80eFDA")), // Diego Asencio - Plenitud/Polkadot
+				AccountId::from(hex!("50D9DF1EB7333151a3F9F2aA690810Acc4B11D9f")), // Plenitud - Plenitud/Polkadot
 			],
 			// Initial PoA authorities
 			vec![
