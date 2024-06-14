@@ -59,7 +59,7 @@ parameter_types! {
 	pub const MaximumBlockWeight: Weight = Weight::from_parts(1024, 1);
 	pub const MaximumBlockLength: u32 = 2 * 1024;
 	pub const AvailableBlockRatio: Perbill = Perbill::one();
-	pub const SS58Prefix: u8 = 1996;
+	pub const SS58Prefix: u64 = 1996;
 }
 
 #[derive_impl(frame_system::config_preludes::TestDefaultConfig as frame_system::DefaultConfig)]
