@@ -7,7 +7,7 @@ plenitud-template-node key insert --base-path /data/node01 --chain prod --scheme
 plenitud-template-node --base-path /data/node01 \
   --chain prod \
   --port 30333 \
-  --rpc-port 9945 \
+  --rpc-port 9944 \
   --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
   --validator \
   --rpc-methods Unsafe \

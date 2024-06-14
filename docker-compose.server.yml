@@ -15,6 +15,23 @@ services:
     networks:
       - plenitud-net
 
+  plenitud-blockchain-server-2:
+    build: .
+    container_name: plenitud-blockchain-server-2
+    command: ./init-node-server-2.sh
+    ports:
+      - "30334:30334"
+      - "9934:9934"
+      - "9945:9945"
+      - "9616:9616"
+    restart: always
+    depends_on:
+      - plenitud-blockchain-server
+    volumes:
+      - blockchain-data:/data/node02
+    networks:
+      - plenitud-net
+
   https-portal:
     image: steveltn/https-portal:1
     ports:
