@@ -3,7 +3,7 @@ services:
   plenitud-blockchain-server:
     build: .
     container_name: plenitud-blockchain-server
-    command: /init-node-server.sh
+    command: ./init-node-server.sh
     ports:
       - "30333:30333"
       - "9933:9933"
@@ -11,7 +11,6 @@ services:
       - "9615:9615"
     restart: always
     volumes:
-      - ./init-node-server.sh:/init-node-server.sh
       - blockchain-data:/data/node01
     networks:
       - plenitud-net
