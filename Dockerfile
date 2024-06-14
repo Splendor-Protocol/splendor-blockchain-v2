@@ -10,6 +10,7 @@ COPY --from=builder /plenitud/target/release/plenitud-template-node /usr/local/b
 COPY --from=builder /plenitud/init-node-server.sh /init-node-server.sh
 COPY --from=builder /plenitud/init-node-server-2.sh /init-node-server-2.sh
 RUN chmod +x /init-node-server.sh
+RUN chmod +x /init-node-server-2.sh
 
 RUN useradd -m -u 1000 -U -s /bin/sh -d /node-dev node-dev && \
   mkdir -p /chain-data /node-dev/.local/share && \
