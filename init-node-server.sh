@@ -2,9 +2,9 @@
 
 PASSWORD="Pl3n1TuD"
 
-plenitud key insert --base-path /data/node01 --chain prod --scheme Ecdsa --suri "joke wealth damage glide mom search hundred cream school brown alone general" --password $PASSWORD --key-type aura
+plenitud-template-node key insert --base-path /data/node01 --chain prod --scheme Ecdsa --suri "joke wealth damage glide mom search hundred cream school brown alone general" --password $PASSWORD --key-type aura
 
-plenitud --base-path /data/node01 \
+plenitud-template-node --base-path /data/node01 \
   --chain prod \
   --port 30333 \
   --rpc-port 9945 \
