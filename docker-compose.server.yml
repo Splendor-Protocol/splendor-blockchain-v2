@@ -19,11 +19,6 @@ services:
     build: .
     container_name: plenitud-blockchain-server-2
     command: ./init-node-server-2.sh
-    ports:
-      - "30333:30334"
-      - "9933:9934"
-      - "9944:9945"
-      - "9615:9616"
     restart: always
     depends_on:
       - plenitud-blockchain-server
