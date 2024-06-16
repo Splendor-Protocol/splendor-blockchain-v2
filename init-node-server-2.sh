@@ -3,7 +3,7 @@
 PASSWORD="Pl3n1TuD"
 
 plenitud-template-node --base-path /data/node02 \
-  --chain customSpecRaw.json \
+  --chain ./customSpecRaw.json \
   --port 30334 \
   --rpc-port 9945 \
   --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
