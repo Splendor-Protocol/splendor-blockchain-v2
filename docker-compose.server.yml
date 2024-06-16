@@ -11,7 +11,7 @@ services:
       - "9615:9615"
     restart: always
     volumes:
-      - blockchain-data:/data/node01
+      - blockchain-data-1:/data/node01
     networks:
       - plenitud-net
 
@@ -23,7 +23,7 @@ services:
     depends_on:
       - plenitud-blockchain-server
     volumes:
-      - blockchain-data:/data/node02
+      - blockchain-data-2:/data/node02
     networks:
       - plenitud-net
 
@@ -44,7 +44,8 @@ services:
 
 volumes:
   https-portal-data:
-  blockchain-data:
+  blockchain-data-1:
+  blockchain-data-2:
 
 networks:
   plenitud-net:
