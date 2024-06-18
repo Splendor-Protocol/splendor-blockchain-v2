@@ -18,7 +18,6 @@ plenitud-template-node --base-path /data/node01 \
   --name plenitud-node01 \
   --rpc-external --rpc-cors all \
   --no-mdns \
-  --node-key 2980169f85d6d5e7f82b62ff01ce679bfd3d8dedc0d244c556336da97f03fc8b \
   --pruning archive \
   --offchain-worker always \
   --password $PASSWORD
