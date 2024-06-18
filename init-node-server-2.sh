@@ -2,8 +2,17 @@
 
 PASSWORD="Pl3n1TuD"
 
+ls
+pwd
+
+echo "antes de 1"
 plenitud-template-node key insert --base-path /data/node02 --chain ./customSpecRaw.json --scheme Sr25519 --suri "electric pass pioneer magnet reward upon gloom deal pigeon cluster snake width" --password $PASSWORD --key-type aura
+
+echo "despues de 1"
+
 plenitud-template-node key insert --base-path /data/node02 --chain ./customSpecRaw.json --scheme Ed25519 --suri "capital mixture elephant message current genre expire come absent monkey frog strike" --password $PASSWORD --key-type gran
+
+echo "despues de 2"
 
 plenitud-template-node --base-path /data/node02 \
   --chain ./customSpecRaw.json \
