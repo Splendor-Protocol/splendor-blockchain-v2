@@ -18,4 +18,4 @@ plenitud-template-node --base-path /data/node02 \
   --pruning archive \
   --offchain-worker always \
   --password $PASSWORD \
-  --bootnodes /ip4/104.236.195.108/tcp/30333/p2p/12D3KooWSNspXwaLmtTec78keeP7KKPDapFJyYXxqtSFWsZzeCo2
+  --bootnodes /ip4/104.236.195.108/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
