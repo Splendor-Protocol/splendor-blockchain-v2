@@ -6,7 +6,7 @@
   "telemetryEndpoints": null,
   "protocolId": null,
   "properties": {
-    "ss58Format": 1996,
+    "ss58Format": 1240,
     "tokenDecimals": 18,
     "tokenSymbol": "PLN"
   },
