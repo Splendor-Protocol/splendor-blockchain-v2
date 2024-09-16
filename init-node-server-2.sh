@@ -2,17 +2,17 @@
 
 PASSWORD="Pl3n1TuD"
 
-plenitud-template-node key insert --base-path /data/node02 --chain ./customSpecRaw.json --scheme Sr25519 --suri "capital mixture elephant message current genre expire come absent monkey frog strike" --password $PASSWORD --key-type aura
-plenitud-template-node key insert --base-path /data/node02 --chain ./customSpecRaw.json --scheme Ed25519 --suri "capital mixture elephant message current genre expire come absent monkey frog strike" --password $PASSWORD --key-type gran
+splendor-template-node key insert --base-path /data/node02 --chain ./customSpecRaw.json --scheme Sr25519 --suri "capital mixture elephant message current genre expire come absent monkey frog strike" --password $PASSWORD --key-type aura
+splendor-template-node key insert --base-path /data/node02 --chain ./customSpecRaw.json --scheme Ed25519 --suri "capital mixture elephant message current genre expire come absent monkey frog strike" --password $PASSWORD --key-type gran
 
-plenitud-template-node --base-path /data/node02 \
+splendor-template-node --base-path /data/node02 \
   --chain ./customSpecRaw.json \
   --port 30334 \
   --rpc-port 9945 \
   --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
   --validator \
   --rpc-methods Unsafe \
-  --name plenitud-node02 \
+  --name splendor-node02 \
   --rpc-external --rpc-cors all \
   --no-mdns \
   --node-key 74dbaaaf149528373090ee17d3605b53d7175e8affd63f53aaf6e22101d3356e \

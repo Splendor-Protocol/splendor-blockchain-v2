@@ -1,8 +1,8 @@
 version: '3.3'
 services:
-  plenitud-blockchain-server:
+  splendor-blockchain-server:
     build: .
-    container_name: plenitud-blockchain-server
+    container_name: splendor-blockchain-server
     command: ./init-node-server.sh
     ports:
       - "30333:30333"
@@ -13,19 +13,19 @@ services:
     volumes:
       - blockchain-data-1:/data/node01
     networks:
-      - plenitud-net
+      - splendor-net
 
-  plenitud-blockchain-server-2:
+  splendor-blockchain-server-2:
     build: .
-    container_name: plenitud-blockchain-server-2
+    container_name: splendor-blockchain-server-2
     command: ./init-node-server-2.sh
     restart: always
     depends_on:
-      - plenitud-blockchain-server
+      - splendor-blockchain-server
     volumes:
       - blockchain-data-2:/data/node02
     networks:
-      - plenitud-net
+      - splendor-net
 
   https-portal:
     image: steveltn/https-portal:1
@@ -33,14 +33,14 @@ services:
       - '80:80'
       - '443:443'
     depends_on:
-      - plenitud-blockchain-server-2
+      - splendor-blockchain-server-2
     restart: always
     env_file:
       - .env
     volumes:
       - https-portal-data:/var/lib/https-portal
     networks:
-      - plenitud-net
+      - splendor-net
 
 volumes:
   https-portal-data:
@@ -48,4 +48,4 @@ volumes:
   blockchain-data-2:
 
 networks:
-  plenitud-net:
+  splendor-net:

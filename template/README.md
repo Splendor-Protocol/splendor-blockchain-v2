@@ -1,4 +1,4 @@
-# Plenitud Node Template
+# splendor Node Template
 
 A [FRAME](https://docs.substrate.io/v3/runtime/frame)-based [Substrate](https://substrate.io) template node with the Ethereum RPC support, ready for hacking.
 
@@ -13,13 +13,13 @@ $ cargo build --release
 To execute the chain, run:
 
 ```sh
-$ ./target/release/plenitud-template-node --dev
+$ ./target/release/splendor-template-node --dev
 ```
 
 The node also supports to use manual seal (to produce block manually through RPC). This is also used by the `ts-tests`:
 
 ```sh
-$ ./target/release/plenitud-template-node --dev --sealing=manual
+$ ./target/release/splendor-template-node --dev --sealing=manual
 ```
 
 The output shows the following logs:

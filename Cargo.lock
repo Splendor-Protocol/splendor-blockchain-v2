@@ -2427,7 +2427,7 @@ dependencies = [
  "fp-storage",
  "futures",
  "parity-scale-codec",
- "plenitud-template-runtime",
+ "splendor-template-runtime",
  "sc-block-builder",
  "sc-cli",
  "sc-client-db",
@@ -2507,7 +2507,7 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "parking_lot 0.12.3",
- "plenitud-template-runtime",
+ "splendor-template-runtime",
  "sc-block-builder",
  "sc-client-api",
  "sc-client-db",
@@ -6372,7 +6372,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e3d7ddaed09e0eb771a79ab0fd64609ba0afb0a8366421957936ad14cbd13630"
 
 [[package]]
-name = "plenitud-template-node"
+name = "splendor-template-node"
 version = "0.0.0"
 dependencies = [
  "async-trait",
@@ -6401,7 +6401,7 @@ dependencies = [
  "pallet-transaction-payment-rpc",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-scale-codec",
- "plenitud-template-runtime",
+ "splendor-template-runtime",
  "sc-basic-authorship",
  "sc-chain-spec",
  "sc-cli",
@@ -6440,7 +6440,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "plenitud-template-runtime"
+name = "splendor-template-runtime"
 version = "0.0.0"
 dependencies = [
  "fp-account",

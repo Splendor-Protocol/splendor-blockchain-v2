@@ -1,5 +1,5 @@
 [package]
-name = "plenitud-template-runtime"
+name = "splendor-template-runtime"
 version = "0.0.0"
 license = "Unlicense"
 description = "A fresh FRAME-based Substrate runtime, ready for hacking."

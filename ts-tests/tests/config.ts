@@ -4,13 +4,13 @@ export const GENESIS_ACCOUNT_BALANCE = "340282366920938463463374607431768211455"
 
 export const FIRST_CONTRACT_ADDRESS = "0xc2bf5f29a4384b1ab0c063e1c666f02121b6084a";
 
-export const NODE_BINARY_NAME = "plenitud-template-node";
+export const NODE_BINARY_NAME = "splendor-template-node";
 
 export const RUNTIME_SPEC_NAME = "frontier-template";
 export const RUNTIME_SPEC_VERSION = 1;
 export const RUNTIME_IMPL_VERSION = 1;
 
-export const CHAIN_ID = 1240;
+export const CHAIN_ID = 9126;
 export const BLOCK_TIMESTAMP = 6; // 6 seconds per block
 export const BLOCK_HASH_COUNT = 256;
 export const EXISTENTIAL_DEPOSIT = 0; // The minimum amount required to keep an account open

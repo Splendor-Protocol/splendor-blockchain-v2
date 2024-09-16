@@ -16,7 +16,7 @@ use crate::chain_spec::get_account_id_from_seed;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Plenitud Node".into()
+		"splendor Node".into()
 	}
 
 	fn impl_version() -> String {
@@ -166,7 +166,7 @@ pub fn run() -> sc_cli::Result<()> {
 			use frame_benchmarking_cli::{
 				BenchmarkCmd, ExtrinsicFactory, SUBSTRATE_REFERENCE_HARDWARE,
 			};
-			use plenitud_template_runtime::{Hashing, EXISTENTIAL_DEPOSIT};
+			use splendor_template_runtime::{Hashing, EXISTENTIAL_DEPOSIT};
 
 			let runner = cli.create_runner(cmd)?;
 			match cmd {

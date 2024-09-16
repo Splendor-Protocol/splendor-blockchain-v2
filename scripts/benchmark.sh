@@ -7,7 +7,7 @@
 
 set -e
 
-BINARY="./target/release/plenitud-template-node"
+BINARY="./target/release/splendor-template-node"
 
 function choose_and_bench {
     readarray -t options < <(${BINARY} benchmark pallet --list | sed 1d)

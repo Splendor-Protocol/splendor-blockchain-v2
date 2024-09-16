@@ -200,7 +200,7 @@ pallet-hotfix-sufficients = { path = "frame/hotfix-sufficients", default-feature
 # Frontier Utility
 precompile-utils = { path = "precompiles", default-features = false }
 # Frontier Template
-plenitud-template-runtime = { path = "template/runtime", default-features = false }
+splendor-template-runtime = { path = "template/runtime", default-features = false }
 
 [profile.release]
 # Substrate runtime requires unwinding.

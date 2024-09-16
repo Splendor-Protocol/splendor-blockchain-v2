@@ -1,14 +1,14 @@
 {
-  "name": "Plenitud Network Mainnet",
+  "name": "splendor Network Mainnet",
   "id": "prod",
   "chainType": "Live",
   "bootNodes": [],
   "telemetryEndpoints": null,
   "protocolId": null,
   "properties": {
-    "ss58Format": 1240,
+    "ss58Format": 9126,
     "tokenDecimals": 18,
-    "tokenSymbol": "PLN"
+    "tokenSymbol": "SPL"
   },
   "codeSubstitutes": {},
   "genesis": {

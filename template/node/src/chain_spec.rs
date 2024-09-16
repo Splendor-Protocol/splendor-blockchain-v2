@@ -10,7 +10,7 @@ use sp_core::ecdsa;
 use sp_core::{Pair, Public, H160, U256};
 use sp_runtime::traits::{IdentifyAccount, Verify};
 // Frontier
-use plenitud_template_runtime::{
+use splendor_template_runtime::{
 	AccountId, Balance, RuntimeGenesisConfig, SS58Prefix, Signature, WASM_BINARY,
 };
 
@@ -47,26 +47,26 @@ pub fn authority_keys_from_seed(s: &str) -> (AuraId, GrandpaId) {
 
 fn properties() -> Properties {
 	let mut properties = Properties::new();
-	properties.insert("tokenSymbol".into(), "PLN".into());
+	properties.insert("tokenSymbol".into(), "SPL".into());
 	properties.insert("tokenDecimals".into(), 18.into());
 	properties.insert("ss58Format".into(), SS58Prefix::get().into());
 	properties
 }
 
-const PLN_UNITS: Balance = 1_000_000_000_000_000_000;
+const SPL_UNITS: Balance = 1_000_000_000_000_000_000;
 
 pub fn production_config(enable_manual_seal: bool) -> ChainSpec {
 	ChainSpec::builder(WASM_BINARY.expect("WASM not available"), Default::default())
-		.with_name("Plenitud Network Mainnet")
+		.with_name("splendor Network Mainnet")
 		.with_id("prod")
 		.with_chain_type(ChainType::Live)
 		.with_properties(properties())
 		.with_genesis_config_patch(mainnet_genesis(
-			// Sudo account (Plenitud)
+			// Sudo account (splendor)
 			AccountId::from(hex!("50D9DF1EB7333151a3F9F2aA690810Acc4B11D9f")),
 			// Pre-funded accounts
 			vec![
-				AccountId::from(hex!("50D9DF1EB7333151a3F9F2aA690810Acc4B11D9f")), // Plenitud - Plenitud/Polkadot
+				AccountId::from(hex!("50D9DF1EB7333151a3F9F2aA690810Acc4B11D9f")), // splendor - splendor/Polkadot
 			],
 			// Initial PoA authorities
 			vec![
@@ -82,7 +82,7 @@ pub fn production_config(enable_manual_seal: bool) -> ChainSpec {
 
 pub fn development_config(enable_manual_seal: bool) -> ChainSpec {
 	ChainSpec::builder(WASM_BINARY.expect("WASM not available"), Default::default())
-		.with_name("Plenitud Development")
+		.with_name("splendor Development")
 		.with_id("dev")
 		.with_chain_type(ChainType::Development)
 		.with_properties(properties())
@@ -109,7 +109,7 @@ pub fn development_config(enable_manual_seal: bool) -> ChainSpec {
 
 pub fn local_testnet_config() -> ChainSpec {
 	ChainSpec::builder(WASM_BINARY.expect("WASM not available"), Default::default())
-		.with_name("Plenitud Local Testnet")
+		.with_name("splendor Local Testnet")
 		.with_id("local_testnet")
 		.with_chain_type(ChainType::Local)
 		.with_properties(properties())
@@ -193,7 +193,7 @@ fn testnet_genesis(
 			"balances": endowed_accounts
 				.iter()
 				.cloned()
-				.map(|k| (k, 1_000_000 * PLN_UNITS))
+				.map(|k| (k, 1_000_000 * SPL_UNITS))
 				.collect::<Vec<_>>()
 		},
 		"aura": { "authorities": initial_authorities.iter().map(|x| (x.0.clone())).collect::<Vec<_>>() },
@@ -263,7 +263,7 @@ fn mainnet_genesis(
 			"balances": endowed_accounts
 				.iter()
 				.cloned()
-				.map(|k| (k, 100_000_000 * PLN_UNITS))
+				.map(|k| (k, 100_000_000 * SPL_UNITS))
 				.collect::<Vec<_>>()
 		},
 		"aura": { "authorities": initial_authorities.iter().map(|x| (x.0.clone())).collect::<Vec<_>>() },
